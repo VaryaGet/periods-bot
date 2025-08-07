@@ -81,7 +81,7 @@ public final class CmdCurrentPeriod implements Cmd<Update, AbsSender> {
                             "Началось: %s\nДень: %s\nОсталось: %s\nБудет: %s",
                             current.start().format(this.formatter),
                             current.days().toString(),
-                            periods.avgLength(10) - current.days(),
+                            length,
                             LocalDate.now().plusDays(length).format(this.formatter)
                         );
                     }
